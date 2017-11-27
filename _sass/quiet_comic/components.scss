@@ -2,7 +2,7 @@
   min-height: 100vh;
   // temporary color
   background-color: hsla(31, 15%, 50%, 0.1);
-  margin-top: -$header-height;
+  margin-top: -$min-header-height;
 }
 
 header {
@@ -11,16 +11,21 @@ header {
   z-index: 1;
 
   ul {
-    margin: 0 1rem 0 0;
-    height: 80px;
+    margin: 0 1rem;
+    min-height: $min-header-height;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
   }
 
   li {
     display: inline-block;
-    padding: 1rem;
+    padding: 0.5rem;
+  }
+
+  .nav-home {
+    margin-right: auto;
   }
 }
 

@@ -1,22 +1,24 @@
 <header>
-  {% if page.is_home %}
-    <a href="{{ site.baseurl }}">
-      <img src={{ site.brand_image }} />
-    </a>
-  {% endif %}
   <nav>
     <ul>
+      {% unless page.is_home %}
+        <li class="nav-home">
+          <a href="{{ site.url }}">
+            <img src={{ site.brand_image | relative_url }} />
+          </a>
+        </li>
+      {% endunless %}
       <li>
-        <a href="{{ site.baseurl}}{{ site.pages.last.url}}">Latest</a>
+        <a href="{{ site.pages.last.url | relative_url }}">Latest</a>
       </li>
       <li>
-        <a href="{{ site.baseurl }}{{ site.pages.first.url }}">First</a>
+        <a href="{{ site.pages.first.url | relative_url }}">First</a>
       </li>
       <li>
-        <a href="{{ site.baseurl}}/pages">All</a>
+        <a href="{{ "pages" | relative_url }}">All</a>
       </li>
       <li>
-        <a href="{{ site.baseurl}}/gallery">Gallery</a>
+        <a href="{{ "gallery" | relative_url }}">Gallery</a>
       </li>
     </ul>
   </nav>

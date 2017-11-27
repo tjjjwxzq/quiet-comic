@@ -13,7 +13,7 @@ description:       "A quiet webcomic"
 url:               # the base hostname and protocol (eg. http://example.com)
 baseurl:           # the subpath of your site eg. /mycomic
 repository:        # Github username/repo-name
-brand_image:       # path to brand image
+brand_image:       "assets/images/placeholder-brand-image.png" # path to brand image in the `assets/images` folder
 
 comments:
   facebook:
@@ -80,3 +80,19 @@ plugins:
   -                jekyll-paginate-v2
   -                jekyll-sitemap
   -                jekyll-feed
+
+# Defaults
+defaults:
+  # comic pages
+  -
+    scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: "pages"
+  -
+    scope:
+      path: "artworks"
+      type: "artworks"
+    values:
+      layout: "artworks"
