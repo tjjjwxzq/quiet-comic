@@ -1,0 +1,33 @@
+.Home-img {
+  min-height: 100vh;
+  // temporary color
+  background-color: hsla(31, 15%, 50%, 0.1);
+  margin-top: -$header-height;
+}
+
+header {
+  list-style: none;
+  position: relative;
+  z-index: 1;
+
+  ul {
+    margin: 0 1rem 0 0;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  li {
+    display: inline-block;
+    padding: 1rem;
+  }
+}
+
+.pages-layout {
+
+  &.Container--fluid {
+    width: 100%;
+    padding: 1rem;
+  }
+}

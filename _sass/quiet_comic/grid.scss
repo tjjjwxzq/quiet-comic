@@ -1,0 +1,420 @@
+.Container--fluid {
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.Container--fixed {
+  max-width: 80%;
+  width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.Grid-cell {
+  flex: 1;
+}
+
+// cell order
+.cell--first {
+  order: 1;
+}
+
+.cell--last {
+  order: 100;
+}
+
+@media (min-width: $break-sm) {
+  .sm-cell--first {
+    order: 1;
+  }
+
+  .sm-cell--last {
+    order: 100;
+  }
+}
+
+@media (min-width: $break-md) {
+  .md-cell--first {
+    order: 1;
+  }
+
+  .md-cell--last {
+    order: 100;
+  }
+}
+
+
+@media (min-width: $break-lg) {
+  .lg-cell--first {
+    order: 1;
+  }
+
+  .lg-cell--last {
+    order: 100;
+  }
+}
+
+
+@media (min-width: $break-xl) {
+  .xl-cell--first {
+    order: 1;
+  }
+
+  .xl-cell--last {
+    order: 100;
+  }
+}
+
+.Grid-cell-inner {
+  padding: 1rem;
+}
+
+.Demo {
+  width: 100%;
+  background-color: hsla(31, 15%, 50%, .1);
+  padding: 1rem;
+  text-align: center;
+}
+
+// group alignment
+.Grid--top {
+  align-items: flex-start;
+}
+
+.Grid-bottom {
+  align-items: flex-end;
+}
+
+.Grid--center {
+  align-items: center;
+}
+
+.Grid--justifyCenter {
+  justify-content: center;
+}
+
+// Individual alignment
+.Grid-cell--top {
+  align-self: flex-start;
+}
+
+.Grid-cell--bottom {
+  align-self: flex-end;
+}
+
+.Grid-cell--center {
+  align-self: center;
+}
+
+.Grid-cell--autoSize {
+  flex: none;
+}
+
+//  Group sizing
+//  baseline flex-basis
+.Grid--1of1 > .Grid-cell {
+  flex: 0 0 100%;
+}
+
+.Grid--1of2 > .Grid-cell {
+  flex: 0 0 50%;
+}
+
+.Grid--1of3 > .Grid-cell {
+  flex: 0 0 33.33333%;
+}
+
+.Grid--1of4 > .Grid-cell {
+  flex: 0 0 25%;
+}
+
+.Grid--1of6 > .Grid-cell {
+  flex: 0 0 16.666666%;
+}
+
+
+// flex-basis at different breakpoints
+@media (min-width: $break-sm) {
+  .sm-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+
+  .sm-Grid--1of1 > .Grid-cell {
+    flex: 0 0 100%;
+  }
+
+  .sm-Grid--1o2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+
+  .sm-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.33333%;
+  }
+
+  .sm-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+  }
+
+  .sm-Grid--1of6 > .Grid-cell {
+  flex: 0 0 16.666666%;
+}
+
+
+
+}
+
+@media (min-width: $break-md) {
+  .md-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+
+  .md-Grid--1of1 > .Grid-cell {
+    flex: 0 0 100%;
+  }
+
+  .md-Grid--1o2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+
+  .md-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.33333%;
+  }
+
+  .md-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+  }
+
+  .md-Grid--1of6 > .Grid-cell {
+    flex: 0 0 16.666666%;
+  }
+
+}
+
+@media (min-width: $break-lg) {
+  .lg-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+
+  .lg-Grid--1of1 > .Grid-cell {
+    flex: 0 0 100%;
+  }
+
+  .lg-Grid--1o2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+
+  .lg-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.33333%;
+  }
+
+  .lg-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+  }
+
+  .lg-Grid--1of6 > .Grid-cell {
+    flex: 0 0 16.666666%;
+  }
+}
+
+@media (min-width: $break-xl) {
+  .xl-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+
+  .xl-Grid--1of1 > .Grid-cell {
+    flex: 0 0 100%;
+  }
+
+  .xl-Grid--1o2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+
+  .xl-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.33333%;
+  }
+
+  .xl-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+  }
+
+  .lg-Grid--1of6 > .Grid-cell {
+    flex: 0 0 16.666666%;
+  }
+}
+
+//  individual sizing per cell
+//  baseline widths
+.cell--1of1 {
+  width: 100% !important;
+  flex: none !important;
+}
+
+.cell--1of2 {
+  width: 50% !important;
+  flex: none !important;
+}
+
+.cell--1of3 {
+  width: 33.33333% !important;
+  flex: none !important;
+}
+
+.cell--2of3 {
+  width: 66.666666% !important;
+  flex: none !important;
+}
+
+
+.cell--1of4 {
+  width: 25% !important;
+  flex: none !important;
+}
+
+// widths at different breakpoints
+@media (min-width: $break-sm) {
+  .sm-cell--1of1 {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .sm-cell--1of2 {
+    width: 50% !important;
+    flex: none !important;
+  }
+
+  .sm-cell--1of3 {
+    width: 33.33333% !important;
+    flex: none !important;
+  }
+
+  .sm-cell--2of3 {
+    width: 66.666666% !important;
+    flex: none !important;
+  }
+
+  .sm-cell--1of4 {
+    width: 25% !important;
+    flex: none !important;
+  }
+}
+
+@media (min-width: $break-md) {
+  .md-cell--1of1 {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .md-cell--1of2 {
+    width: 50% !important;
+    flex: none !important;
+  }
+
+  .md-cell--1of3 {
+    width: 33.33333% !important;
+    flex: none !important;
+  }
+
+  .md-cell--2of3 {
+    width: 66.666666% !important;
+    flex: none !important;
+  }
+
+  .md-cell--1of4 {
+    width: 25% !important;
+    flex: none !important;
+  }
+}
+
+@media (min-width: $break-lg) {
+  .lg-cell--1of1 {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .lg-cell--1of2 {
+    width: 50% !important;
+    flex: none !important;
+  }
+
+  .lg-cell--1of3 {
+    width: 33.33333% !important;
+    flex: none !important;
+  }
+
+  .lg-cell--2of3 {
+    width: 66.666666% !important;
+    flex: none !important;
+  }
+
+  .lg-cell--1of4 {
+    width: 25% !important;
+    flex: none !important;
+  }
+}
+
+@media (min-width: $break-xl) {
+  .xl-cell--1of1 {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .xl-cell--1of2 {
+    width: 50% !important;
+    flex: none !important;
+  }
+
+  .xl-cell--1of3 {
+    width: 33.33333% !important;
+    flex: none !important;
+  }
+
+  .xl-cell--2of3 {
+    width: 66.666666% !important;
+    flex: none !important;
+  }
+
+  .xl-cell--1of4 {
+    width: 25% !important;
+    flex: none !important;
+  }
+}
+
+// Gutters
+.Grid--gutters {
+  // we have negative margins so that we can pad
+  // the grid cells on the top and left
+  // and so that grids will stack on top of each other nicely
+  margin: -1rem 0 1rem -1rem;
+}
+
+.Grid--gutters > .Grid-cell {
+  padding: 1rem 0 0 1rem;
+}
+
+.Grid--guttersLg {
+  margin: -1.5rem 0 1.5rem -1.5rem;
+}
+
+.Grid--guttersLg > .Grid-cell {
+  padding: 1.5rem 0 0 1.5rem;
+}
+
+.Grid--guttersXL {
+  margin: -2rem 0 2rem -2rem;
+}
+
+.Grid--guttersXL > .Grid-cell {
+  padding: 2rem 0 0 2rem;
+}

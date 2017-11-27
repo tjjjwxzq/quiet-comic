@@ -1,0 +1,19 @@
+@mixin border-slide-bottom($color, $thickness) {
+
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0%;
+    border-bottom: $thickness solid $color;
+    transition: width 0.4s ease-in-out;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+// fonts
+@font-face {
+  font-family: "Gloria Hallelujah";
+  src: url("fonts/GloriaHallelujah.ttf");
+}
+
+@font-face {
+  font-family: "Permanent Marker";
+  src: url("fonts/PermanentMarker.ttf")
+}
+
+// VARIABLES
+
+// fonts
+$base-font-family: "Gloria Hallelujah", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$secondary-font-family: "Permanent Marker", Helvetica, Arial, sans-serif !default;
+$base-font-size: 16px !default;
+$small-font-size: $base-font-size * 0.875 !default;
+$base-font-weight: 400px !default;
+$base-line-height: 1.5 !default;
+
+// colors
+$text-color: hsl(203, 17%, 27%) !default;
+$text-color-light: lighten($text-color, 40%) !default;
+$text-color-dark: darken($text-color, 40%) !default;
+$background-color: #FFF !default;
+$brand-color: hsl(205, 30%, 45%) !default;
+
+// header
+$header-height: 80px;
+
+// min breakpoint widths
+$break-sm: 300px;
+$break-md: 600px;
+$break-lg: 900px;
+$break-xl: 1200px;
+
+// import partials
+@import
+  "quiet_comic/mixins",
+  "quiet_comic/base",
+  "quiet_comic/components",
+  "quiet_comic/grid"
+;

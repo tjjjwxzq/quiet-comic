@@ -1,0 +1,66 @@
+// reset basic elements
+html, body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr, dl, dd, dt,
+ul, ol, li, figure, table, thead, tbody,
+tfoot, tr, td, th, article, header, footer, nav {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+
+  color: $text-color;
+  background-color: $background-color;
+}
+
+h6 {
+  font-size: $base-font-size * 1.125;
+  margin: $base-font-size * 1.825 0;
+}
+
+h5 {
+  font-size: $base-font-size * 1.25;
+  margin: $base-font-size * 1.75 0;
+}
+
+h4 {
+  font-size: $base-font-size * 1.5;
+  margin: $base-font-size * 1.5 0;
+}
+
+h3 {
+  font-size: $base-font-size * 1.625;
+  margin: $base-font-size * 1.357 0;
+}
+
+h2 {
+  font-size: $base-font-size * 1.8;
+  margin: $base-font-size * 1.2  0;
+}
+
+h1 {
+  font-size: $base-font-size * 1.925;
+  margin: $base-font-size * 1.075  0;
+}
+
+p, blockquote, pre, ul, ol, dl, figure {
+  margin: $base-font-size 0;
+}
+
+a {
+  @include border-slide-bottom($text-color, 2px);
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($brand-color, 10%);
+  }
+
+  &:hover {
+    color: $text-color;
+  }
+}
