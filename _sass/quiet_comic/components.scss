@@ -31,8 +31,32 @@ header {
 
 .pages-layout {
 
-  &.Container--fluid {
-    width: 100%;
-    padding: 1rem;
+  .Grid-cell {
+    display: flex;
+    align-items: stretch;
   }
+
+}
+
+.thumbnail-link {
+  @include overlay-on-hover($brand-color);
+
+  text-align: center;
+  background-size: cover;
+
+  &:hover {
+
+    .thumbnail-title {
+      opacity: 1;
+    }
+  }
+}
+
+.thumbnail-title {
+  z-index: 1;
+  color: #fff;
+  padding: 0.5em;
+  opacity: 0;
+  filter: brightness(100%);
+  transition: opacity 0.4s ease-in-out;
 }

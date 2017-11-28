@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="pages-layout Container--fluid">
+  <div class="
+    Grid
+    Grid--gutters
+    Grid--1of1
+    sm-Grid--1of2
+    md-Grid--1of4
+    lg-Grid--1of6">
+    {% for page in site.pages %}
+      <div class="Grid-cell">
+        <a href="{{ page.url | relative_url }}" class="thumbnail-link" style="background-image: url('{{ site.base_image_path | relative_url }}{{ page.image }}');" >
+          <h6 class="thumbnail-title">{{ page.title }}</h6>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
