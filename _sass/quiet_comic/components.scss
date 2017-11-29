@@ -24,8 +24,20 @@ header {
     padding: 0.5rem;
   }
 
-  .nav-home {
+  .nav-home-button {
     margin-right: auto;
+
+    a:after {
+      content: none;
+    }
+
+    a {
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    a:hover {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -41,6 +53,7 @@ header {
 .thumbnail-link {
   @include overlay-on-hover($brand-color);
 
+  flex: 1;
   text-align: center;
   background-size: cover;
 

@@ -10,12 +10,22 @@ layout: default
     sm-Grid--1of2
     md-Grid--1of4
     lg-Grid--1of6">
-    {% for page in site.pages %}
+    {% assign pages = site.pages | sort: 'page_number' %}
+    {% for page in pages %}
       <div class="Grid-cell">
         <a href="{{ page.url | relative_url }}" class="thumbnail-link" style="background-image: url('{{ site.base_image_path | relative_url }}{{ page.image }}');" >
-          <h6 class="thumbnail-title">{{ page.title }}</h6>
+          <h6 class="thumbnail-title">
+            {% case site.thumbnail_label %}
+            {% when "title" %}
+              {{ page.title }}
+            {% when "page number" %}
+              {{ page.page_number }}
+            {% endcase %}
+          </h6>
         </a>
       </div>
     {% endfor %}
   </div>
+
+  {% include comments.html %}
 </div>
