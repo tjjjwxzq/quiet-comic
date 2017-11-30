@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
+  <link href="{{ page.url | absolute_url }}" rel="self" type="application/atom+xml" />
+  <link href="{{ '/' | absolute_url }}" rel="alternate" type="text/html" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ '/' | absolute_url | xml_escape }}</id>
+
+  {% if site.title %}
+  <title type="html">{{ site.title | smartify | xml_escape }}</title>
+  {% elsif site.name %}
+  <title type="html">{{ site.name | smartify | xml_escape }}</title>
+  {% endif %}
+
+  {% if site.description %}
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  {% endif %}
+
+  {% if site.author %}
+  <author>
+    <name>{{ site.author.name | default: site.author | xml_escape }}</name>
+    {% if site.author.email %}
+    <email>{{ site.author.email | xml_escape }}</email>
+    {% endif %}
+    {% if site.author.uri %}
+    <uri>{{ site.author.uri | xml_escape }}</uri>
+    {% endif %}
+  </author>
+  {% endif %}
+
+  {% assign collection_name = page.collection %}
+  {% if collection_name == 'pages' %}
+  {% assign items = (site[collection_name] | sort: 'page_number') %}
+  {% elsif collection_name == 'artworks' %}
+  {% assign items = (site[collection_name] | sort: 'date') %}
+  {% else %}
+  {% assign items = (site[collection_name] | sort: 'date') %}
+  {% endif %}
+
+  {% for item in items limit: 10 %}
+  {% unless item.ignore %}
+  <entry>
+    <title>
+      {% case site.feed_label %}
+      {% when 'page_number' %}
+      {{ item.page_number | default: item.title }}
+      {% else %}
+      {{ item.title }}
+      {% endcase %}
+    </title>
+    <link href="{{ item.url | absolute_url }}" rel="alternate" type="text/html" title="{{ item.title | xml_escape }}" />
+    {% if item.date %}
+    <published>{{ item.date | date_to_xmlschema }}</published>
+    {% endif %}
+    <updated>{{ item.last_modified_at | default: item.date | date_to_xmlschema }}</updated>
+    <id>{{ item.id | absolute_url | xml_escape }}</id>
+    <content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}">
+      {{ item.content | strip | xml_escape }}
+    </content>
+
+    <author>
+      <name>{{ site.author.name | default: "" }}</name>
+      {% if site.author.email %}
+      <email>{{ site.author.email }}</email>
+      {% endif %}
+      {% if site.author.uri %}
+      <uri>{{ site.author.uri }}</uri>
+      {% endif %}
+    </author>
+
+    {% unless item.image contains "://" %}
+    {% assign item_image = item.image | absolute_url | xml_escape %}
+    {% endunless %}
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ item_image }}" />
+
+  </entry>
+  {% endunless %}
+  {% endfor %}
+</feed>
