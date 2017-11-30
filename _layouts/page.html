@@ -2,4 +2,37 @@
 layout: default
 ---
 
-{{ content }}
+<div class="Container--fixed">
+  <div class="Grid Grid--1of1">
+    <h3 class="Grid-cell page-header">
+      {{ page.page_number }} - {{ page.title }}
+
+      <small class="size-buttons-container">
+        Zoom -
+        <a href="#width-100">100%</a> &middot;
+        <a href="#width-75">75%</a> &middot;
+        <a href="#width-50">50%</a>
+      </small>
+      <small class="next-prev-link-container">
+        {% if page.previous %}
+          <a href="{{ page.previous.url | relative_url}}">< Prev</a>
+        {% endif %}
+        {% if page.next %}
+          <a href="{{ page.next.url | relative_url}}">Next ></a>
+        {% endif %}
+      </small>
+    </h3>
+
+    <img id="width-50" src="{{ site.pages_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
+
+    <img id="width-75" src="{{ site.pages_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
+
+    <img id="width-100" src="{{ site.pages_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
+  </div>
+
+
+  {{ content }}
+
+  {% include comments.html %}
+
+</div>

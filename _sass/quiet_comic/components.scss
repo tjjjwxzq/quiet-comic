@@ -1,10 +1,4 @@
-.Home-img {
-  min-height: 100vh;
-  // temporary color
-  background-color: hsla(31, 15%, 50%, 0.1);
-  margin-top: -$min-header-height;
-}
-
+// header
 header {
   list-style: none;
   position: relative;
@@ -41,6 +35,16 @@ header {
   }
 }
 
+
+// home page
+.Home-img {
+  min-height: 100vh;
+  // temporary color
+  background-color: hsla(31, 15%, 50%, 0.1);
+  margin-top: -$min-header-height;
+}
+
+// pages and gallery
 .pages-layout {
 
   .Grid-cell {
@@ -72,4 +76,59 @@ header {
   opacity: 0;
   filter: brightness(100%);
   transition: opacity 0.4s ease-in-out;
+}
+
+// page and artwork
+.page-header {
+  display: flex;
+  align-items: stretch;
+}
+
+.next-prev-link-container,
+.size-buttons-container {
+  font-size: 0.5em;
+  align-self: center;
+
+  a {
+    margin: 0 0.3em;
+  }
+}
+
+.size-buttons-container {
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+#width-50 {
+  flex: 0 0 50%;
+  display: none;
+
+  &:target {
+    display: block;
+
+    & ~ #width-100 {
+      display: none;
+    }
+  }
+}
+
+#width-75 {
+  flex: 0 0 75%;
+  display: none;
+
+  &:target {
+    display: block;
+
+    & ~ #width-100 {
+      display: none;
+    }
+  }
+}
+
+#width-100 {
+  flex: 0 0 100%;
+
+  &:target {
+    display: block;
+  }
 }

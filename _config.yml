@@ -90,16 +90,17 @@ defaults:
   # comic pages
   -
     scope:
-      path: "pages"
+      path: ""
       type: "pages"
     values:
-      layout: "pages"
+      layout: "page"
+  # artworks
   -
     scope:
-      path: "artworks"
+      path: ""
       type: "artworks"
     values:
-      layout: "artworks"
+      layout: "artwork"
 
 # jekyll-minimagick config
 mini_magick:
