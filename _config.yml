@@ -14,8 +14,11 @@ url:               # the base hostname and protocol (eg. http://example.com)
 baseurl:           # the subpath of your site eg. /mycomic
 repository:        # Github username/repo-name
 brand_image:       "assets/images/placeholder-brand-image.png" # path to brand image in the `assets/images` folder
-base_image_path:         "assets/images/" # default image directory. Ensure the trailing slash is there
-thumbnail_label: "page number" # either "title" or "page_number"
+base_image_dir:         "assets/images/" # default image directory. Ensure the trailing slash is there
+pages_image_dir: "assets/images/pages/" # default image directory for comic page images. Ensure the trailing slash isthere
+artworks_image_dir: "assets/images/artworks/" # default image directory for artwork images. Ensure the trailing slash is there
+thumbnail_label: "page_number" # either "title" or "page_number"
+feed_label: "page_number" # either "title" or "page_number"
 
 comments:
   facebook:
@@ -47,6 +50,7 @@ author:
   name:            "Your Name"
   bio:
   email:
+  uri:
   facebook:
   github:
   instagram:
@@ -79,6 +83,7 @@ plugins:
   -                jekyll-paginate-v2
   -                jekyll-sitemap
   -                jekyll-feed
+  -                jekyll-minimagick
 
 # Defaults
 defaults:
@@ -95,3 +100,14 @@ defaults:
       type: "artworks"
     values:
       layout: "artworks"
+
+# jekyll-minimagick config
+mini_magick:
+  pages_thumbnails:
+    source: "assets/images/pages"
+    destination: "assets/images/pages/thumbnails"
+    crop: "300x300+0+0"
+  artworks_thumbnails:
+    source: "assets/images/artworks"
+    destination: "assets/images/artworks/thumbnails"
+    crop: "300x300+0+0"

@@ -1,7 +1,7 @@
 ---
 title: Demo Comic Page
-page_number: 3
-image: 'placeholder-thumbnail.jpg'
+page_number: 1
+image: 'placeholder-page.jpg'
 ---
 
 # Hello!

@@ -1,7 +1,7 @@
 ---
-title: BLAH
-page_number: 2
-image: 'placeholder-thumbnail.jpg'
+title: Demo Comic Page
+page_number: 1
+image: 'placeholder-page.jpg'
 ---
 
 # Hello!

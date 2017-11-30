@@ -12,18 +12,20 @@ layout: default
     lg-Grid--1of6">
     {% assign pages = site.pages | sort: 'page_number' %}
     {% for page in pages %}
-      <div class="Grid-cell">
-        <a href="{{ page.url | relative_url }}" class="thumbnail-link" style="background-image: url('{{ site.base_image_path | relative_url }}{{ page.image }}');" >
-          <h6 class="thumbnail-title">
-            {% case site.thumbnail_label %}
-            {% when "title" %}
-              {{ page.title }}
-            {% when "page number" %}
-              {{ page.page_number }}
-            {% endcase %}
-          </h6>
-        </a>
-      </div>
+      {% unless page.ignore %}
+        <div class="Grid-cell">
+          <a href="{{ page.url | relative_url }}" class="thumbnail-link" style="background-image: url('{{ site.pages_image_dir | relative_url }}thumbnails/{{ page.image }}');" >
+            <h6 class="thumbnail-title">
+              {% case site.thumbnail_label %}
+              {% when "title" %}
+                {{ page.title }}
+              {% when "page_number" %}
+                {{ page.page_number }}
+              {% endcase %}
+            </h6>
+          </a>
+        </div>
+        {% endunless %}
     {% endfor %}
   </div>
 
