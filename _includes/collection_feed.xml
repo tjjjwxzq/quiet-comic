@@ -38,7 +38,6 @@
   {% endif %}
 
   {% for item in items limit: 10 %}
-  {% unless item.ignore %}
   <entry>
     <title>
       {% case site.feed_label %}
@@ -74,6 +73,5 @@
     <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ item_image }}" />
 
   </entry>
-  {% endunless %}
   {% endfor %}
 </feed>

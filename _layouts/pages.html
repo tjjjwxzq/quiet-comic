@@ -12,7 +12,6 @@ layout: default
     lg-Grid--1of6">
     {% assign pages = site.pages | sort: 'page_number' %}
     {% for page in pages %}
-      {% unless page.ignore %}
         <div class="Grid-cell">
           <a href="{{ page.url | relative_url }}" class="thumbnail-link" style="background-image: url('{{ site.pages_image_dir | relative_url }}thumbnails/{{ page.image }}');" >
             <h6 class="thumbnail-title">
@@ -25,7 +24,6 @@ layout: default
             </h6>
           </a>
         </div>
-        {% endunless %}
     {% endfor %}
   </div>
 
