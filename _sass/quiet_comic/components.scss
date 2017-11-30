@@ -18,19 +18,23 @@ header {
     padding: 0.5rem;
   }
 
+  .active:after {
+    width: 100%;
+  }
+
   .nav-home-button {
     margin-right: auto;
 
-    a:after {
-      content: none;
-    }
-
     a {
       transition: opacity 0.4s ease-in-out;
-    }
 
-    a:hover {
-      opacity: 0.5;
+      &:after {
+        content: none;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }
@@ -91,15 +95,24 @@ header {
   margin-left: 1em;
 }
 
-.next-prev-link-container,
+.pager-container,
 .size-buttons-container {
   font-size: 0.5em;
   align-self: center;
+}
+
+.pager {
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
 
   a {
     margin: 0 0.3em;
   }
 }
+
 
 .size-buttons-container {
   margin-left: auto;
@@ -132,10 +145,19 @@ header {
   }
 }
 
+.main-image {
+  margin: auto;
+}
+
 #width-100 {
   flex: 0 0 100%;
 
   &:target {
     display: block;
   }
+}
+
+// comments
+.comments-container {
+  margin: 5em 0;
 }

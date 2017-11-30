@@ -29,13 +29,16 @@
   {% endif %}
 
   {% assign collection_name = page.collection %}
-  {% if collection_name == 'pages' %}
-  {% assign items = (site[collection_name] | sort: 'page_number') %}
-  {% elsif collection_name == 'artworks' %}
-  {% assign items = (site[collection_name] | sort: 'date') %}
+  {% case collection_name %}
+  {% when "pages" %}
+  {% assign items = (site[collection_name] | sort: 'page_number' | reverse) %}
+  {% when "artworks" %}
+  {% assign items = (site[collection_name] | sort: 'date' | reverse) %}
   {% else %}
-  {% assign items = (site[collection_name] | sort: 'date') %}
-  {% endif %}
+  {% assign pages = (site["pages"] | sort: 'page_number') %}
+  {% assign artworks = (site["artworks"] | sort: 'date') %}
+  {% assign items = (pages | concat: artworks | sort: 'date' | reverse) %}
+  {% endcase %}
 
   {% for item in items limit: 10 %}
   <entry>

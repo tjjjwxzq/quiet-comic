@@ -9,16 +9,34 @@
         </li>
       {% endunless %}
       <li>
-        <a href="{{ site.pages.last.url | relative_url }}">Latest</a>
+        {% assign last_page = (site.pages | sort: 'page_number' | last) %}
+        {% if page.url == last_page.url %}
+          <a href="{{ last_page.url | relative_url }}" class="active">Latest</a>
+        {% else %}
+          <a href="{{ last_page.url | relative_url }}">Latest</a>
+        {% endif %}
       </li>
       <li>
-        <a href="{{ site.pages.first.url | relative_url }}">First</a>
+        {% assign first_page = (site.pages | sort: 'page_number' | first) %}
+        {% if page.url == first_page.url %}
+          <a href="{{ first_page.url | relative_url }}" class="active">First</a>
+        {% else %}
+          <a href="{{ first_page.url | relative_url }}">First</a>
+        {% endif %}
       </li>
       <li>
-        <a href="{{ "pages" | relative_url }}">All</a>
+        {% if page.url == "/pages/index.html" %}
+          <a href="{{ "pages" | relative_url }}" class="active">All</a>
+        {% else %}
+          <a href="{{ "pages" | relative_url }}">All</a>
+        {% endif %}
       </li>
       <li>
-        <a href="{{ "gallery" | relative_url }}">Gallery</a>
+        {% if page.url == "/artworks/index.html" %}
+          <a href="{{ "artworks" | relative_url }}" class="active">Gallery</a>
+        {% else %}
+          <a href="{{ "artworks" | relative_url }}">Gallery</a>
+        {% endif %}
       </li>
     </ul>
   </nav>
