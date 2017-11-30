@@ -71,7 +71,7 @@ image: 'path/to/comic/strip/image'
 
 The `page_number` will be displayed on the page itself, and, depending on your config, in the pages index on the thumbnail for that page (see how to generate your thumbnail images [here](#thumbnails)).
 
-The `image` should be the path to the comic strip file itself, relative to the base image directory. The default base image directory for comic pages is `assets/images/pages` directory. If you would like to change the directory name, you can set the following in your config:
+The `image` should be the path to the comic strip file itself, relative to the base image directory. The default base image directory for comic pages is `assets/images/pages`. If you would like to change the directory name, you can set the following in your config:
 
 ```yaml
 pages_image_dir: '/new/path/to/images/directory'
@@ -108,7 +108,7 @@ image: "path/to/image/file"
 
 The date is required to sort your artworks in chronological order (when displayed in the gallery page as well as in the feed). Note that it must be written in the `YYYY-MM-DD` ISO 8601 format for it to be recognized as a `Date` by Jekyll (or it will end up a string and sorting won't work as expected).
 
-The `image` should be the path to the comic strip file itself, relative to the base image directory. The default base image directory for artworks is `assets/images/artworks` directory. If you would like to change the directory name, you can set the following in your config:
+The `image` should be the path to the artwork file itself, relative to the base image directory. The default base image directory for artworks is `assets/images/artworks`. If you would like to change the directory name, you can set the following in your config:
 
 ```yaml
 artworks_image_dir: '/new/path/to/images/directory'

@@ -107,8 +107,8 @@ mini_magick:
   pages_thumbnails:
     source: "assets/images/pages"
     destination: "assets/images/pages/thumbnails"
-    crop: "300x300+0+0"
+    crop: "300x300+50+50"
   artworks_thumbnails:
     source: "assets/images/artworks"
     destination: "assets/images/artworks/thumbnails"
-    crop: "300x300+0+0"
+    crop: "300x300+50+50"
