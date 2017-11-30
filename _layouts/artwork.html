@@ -4,8 +4,8 @@ layout: default
 
 <div class="Container--fixed">
   <div class="Grid Grid--1of1">
-    <h3 class="Grid-cell page-header">
-      {{ page.page_number }} - {{ page.title }}
+    <h3 class="Grid-cell artwork-header">
+      {{ page.title }}
       <small class="header-date">
         {{ page.date | date: '%B %d %Y' }}
       </small>
@@ -26,11 +26,11 @@ layout: default
       </small>
     </h3>
 
-    <img id="width-50" src="{{ site.pages_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
+    <img id="width-50" src="{{ site.artworks_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
 
-    <img id="width-75" src="{{ site.pages_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
+    <img id="width-75" src="{{ site.artworks_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
 
-    <img id="width-100" src="{{ site.pages_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
+    <img id="width-100" src="{{ site.artworks_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
   </div>
 
 

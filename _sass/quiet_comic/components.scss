@@ -79,9 +79,16 @@ header {
 }
 
 // page and artwork
-.page-header {
+.page-header, .artwork-header {
   display: flex;
   align-items: stretch;
+}
+
+.header-date {
+  color: $text-color-light;
+  font-size: 0.7em;
+  align-self: center;
+  margin-left: 1em;
 }
 
 .next-prev-link-container,
