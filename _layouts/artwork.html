@@ -16,7 +16,7 @@ layout: default
         <a href="#width-75">75%</a> &middot;
         <a href="#width-50">50%</a>
       </small>
-      <small class="next-prev-link-container">
+      <small class="pager-container">
         {% if page.previous %}
           <a href="{{ page.previous.url | relative_url}}">< Prev</a>
         {% endif %}
@@ -26,11 +26,11 @@ layout: default
       </small>
     </h3>
 
-    <img id="width-50" src="{{ site.artworks_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
+    <img id="width-50" src="{{ site.base_image_dir | relative_url }}artworks/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
 
-    <img id="width-75" src="{{ site.artworks_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
+    <img id="width-75" src="{{ site.base_image_dir | relative_url }}artworks/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
 
-    <img id="width-100" src="{{ site.artworks_image_dir | relative_url }}{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
+    <img id="width-100" src="{{ site.base_image_dir | relative_url }}artworks/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell">
   </div>
 
 

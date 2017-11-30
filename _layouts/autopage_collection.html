@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="pages-layout Container--fluid">
+  <div class="
+    Grid
+    Grid--gutters
+    Grid--1of1
+    sm-Grid--1of2
+    md-Grid--1of4
+    lg-Grid--1of6">
+
+    {% assign collection =  paginator.posts.first.collection %}
+    {% if collection == "pages" %}
+      {% assign items = paginator.posts | sort: 'page_number' | reverse %}
+    {% else %}
+      {% assign items = paginator.posts | sort: 'date' | reverse %}
+    {% endif %}
+    {% for item in items %}
+        <div class="Grid-cell">
+          <a
+            href="{{ item.url | relative_url }}"
+            class="thumbnail-link"
+            style="background-image: url('{{ site.base_image_dir | relative_url }}{{ item.collection}}/thumbnails/{{ item.image }}');" >
+            <h6 class="thumbnail-title">
+              {% case site.thumbnail_label %}
+              {% when "title" %}
+                {{ item.title }}
+              {% when "page_number" %}
+                {{ item.page_number | default: item.title }}
+              {% endcase %}
+            </h6>
+          </a>
+        </div>
+    {% endfor %}
+  </div>
+
+  {% if paginator.total_pages > 1 %}
+    <ul class="pager">
+      {% if paginator.previous_page %}
+        <li class="pager-previous">
+          <a href="{{ paginator.previous_page_path | relative_url }}">< Newer</a>
+        </li>
+      {% endif %}
+      {% if paginator.next_page %}
+        <li class="pager-next">
+          <a href="{{ paginator.next_page_path | relative_url }}">Older ></a>
+        </li>
+      {% endif %}
+    </ul>
+  {% endif %}
+
+  {% include comments.html %}
+</div>

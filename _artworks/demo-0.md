@@ -1,6 +1,6 @@
 ---
-title: Krita
-date: 2017-08-18
+title: BOOY
+date: 2017-10-30
 image: "krita.jpg"
 ---
 

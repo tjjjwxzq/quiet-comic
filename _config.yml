@@ -6,25 +6,23 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale:            "en"
-title:             "My quiet webcomic"
-name:              "Your Name"
-description:       "A quiet webcomic"
-url:               # the base hostname and protocol (eg. http://example.com)
-baseurl:           # the subpath of your site eg. /mycomic
-repository:        # Github username/repo-name
-brand_image:       "assets/images/placeholder-brand-image.png" # path to brand image in the `assets/images` folder
-base_image_dir:         "assets/images/" # default image directory. Ensure the trailing slash is there
-pages_image_dir: "assets/images/pages/" # default image directory for comic page images. Ensure the trailing slash isthere
-artworks_image_dir: "assets/images/artworks/" # default image directory for artwork images. Ensure the trailing slash is there
-thumbnail_label: "page_number" # either "title" or "page_number"
-feed_label: "page_number" # either "title" or "page_number"
+locale:           "en"
+title:            "My quiet webcomic"
+name:             "Your Name"
+description:      "A quiet webcomic"
+url:              # the base hostname and protocol (eg. http://example.com)
+baseurl:          # the subpath of your site eg. /mycomic
+repository:       # Github username/repo-name
+brand_image:      "assets/images/placeholder-brand-image.png" # path to brand image in the `assets/images` folder
+base_image_dir:   "assets/images/" # default image directory. Ensure the trailing slash is there
+thumbnail_label:  "page_number" # either "title" or "page_number"
+feed_label:       "page_number" # either "title" or "page_number"
 
 comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
-    num_posts:     # 5 (default)
-    colorscheme:   # "light" (default), "dark"
+    num_posts:    # 5 (default)
+    colorscheme:  # "light" (default), "dark"
 
 # Social sharing
 twitter:
@@ -33,13 +31,13 @@ facebook:
   username:
   app_id:
   publisher:
-og_image:          # Open Graph site image
+og_image:         # Open Graph site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type             : # Person or Organization (defaults to Person)
-  name             : # If the user or organization name differs from the site's name
-links:             # An array of links to social media profiles
+  type            : # Person or Organization (defaults to Person)
+  name            : # If the user or organization name differs from the site's name
+links:            # An array of links to social media profiles
 
 # Analytics
 google_analytics: # your google analytics tracking code
@@ -47,7 +45,7 @@ google_analytics: # your google analytics tracking code
 
 # Site author
 author:
-  name:            "Your Name"
+  name:           "Your Name"
   bio:
   email:
   uri:
@@ -60,55 +58,78 @@ author:
 # Collections
 collections:
   pages:
-    output:        true
-    permalink:     /:collection/:path/ # trailing slash is necessary for current version of jekyll to serve pages correctly in development
-    layout:        default
+    output:       true
+    permalink:    /:collection/:path/ # trailing slash is necessary for current version of jekyll to serve pages correctly in development
+    layout:       default
   artworks:
-    output:        true
-    permalink:     /:collection/:path/
-    layout:        default
+    output:       true
+    permalink:    /:collection/:path/
+    layout:       default
 
 # Markdown Processing
 kramdown:
-  input:           GFM
+  input:          GFM
 
 # Sass
 sass:
-  sass_dir:        _sass
-  style:           compressed
+  sass_dir:       _sass
+  style:          compressed
 
 
 # Plugins
 plugins:
-  -                jekyll-paginate-v2
-  -                jekyll-sitemap
-  -                jekyll-feed
-  -                jekyll-minimagick
+  -               jekyll-paginate-v2
+  -               jekyll-sitemap
+  -               jekyll-feed
+  -               jekyll-minimagick
 
 # Defaults
 defaults:
   # comic pages
   -
     scope:
-      path: ""
-      type: "pages"
+      path:       ""
+      type:       "pages"
     values:
-      layout: "page"
+      layout:     "page"
   # artworks
   -
     scope:
-      path: ""
-      type: "artworks"
+      path:       ""
+      type:       "artworks"
     values:
-      layout: "artwork"
+      layout:     "artwork"
 
 # jekyll-minimagick config
 mini_magick:
   pages_thumbnails:
-    source: "assets/images/pages"
-    destination: "assets/images/pages/thumbnails"
-    crop: "300x300+50+50"
+    source:       "assets/images/pages"
+    destination:  "assets/images/pages/thumbnails"
+    crop:         "300x300+50+50"
   artworks_thumbnails:
-    source: "assets/images/artworks"
-    destination: "assets/images/artworks/thumbnails"
-    crop: "300x300+50+50"
+    source:       "assets/images/artworks"
+    destination:  "assets/images/artworks/thumbnails"
+    crop:         "300x300+50+50"
+
+# jekyll-paginate-v2 config
+autopages:
+  enabled:        true
+  collections:
+    enabled:      true
+    title:        ':coll'
+    permalink:    "/:coll/"
+    layouts:
+      -           autopage_collection.html
+
+pagination:
+  enabled:        true
+  debug:          true
+  per_page:       5
+  permalink:      '/:num/'
+  title:          ':title | :num of :max'
+  limit:          0
+  sort_field:     'page_number'
+  sort_reverse:   true
+  trail:
+    before:       2
+    after:        2
