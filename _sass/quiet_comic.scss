@@ -27,7 +27,7 @@ $text-color-light: lighten($text-color, 40%) !default;
 $text-color-dark: darken($text-color, 40%) !default;
 $background-color: #FFF !default;
 $brand-color: hsl(205, 30%, 45%) !default;
-$code-block-color: lighten($brand-color, 45%) !default;
+$link-color: lighten($brand-color, 40%) !default;
 
 // header
 $min-header-height: 80px;

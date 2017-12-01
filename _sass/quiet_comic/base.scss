@@ -62,7 +62,7 @@ p, blockquote, pre, ul, ol, dl, figure {
 
 a {
   @include border-slide-bottom($text-color, 0.15em);
-  color: $brand-color;
+  color: $link-color;
   text-decoration: none;
 
   &:visited {
