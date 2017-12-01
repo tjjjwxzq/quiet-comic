@@ -27,6 +27,7 @@ $text-color-light: lighten($text-color, 40%) !default;
 $text-color-dark: darken($text-color, 40%) !default;
 $background-color: #FFF !default;
 $brand-color: hsl(205, 30%, 45%) !default;
+$code-block-color: lighten($brand-color, 45%) !default;
 
 // header
 $min-header-height: 80px;
@@ -42,5 +43,6 @@ $break-xl: 1200px;
   "quiet_comic/mixins",
   "quiet_comic/base",
   "quiet_comic/components",
-  "quiet_comic/grid"
+  "quiet_comic/grid",
+  "quiet_comic/syntax_highlighting"
 ;
