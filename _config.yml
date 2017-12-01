@@ -46,16 +46,16 @@ google_analytics: # your google analytics tracking code
 # Site author
 author:
   name:           "Your Name"
-  bio:
+  bio:            "I quietly create beautiful things"
   email:
-  uri: # link to your home page
+  uri:            # link to your home page
   # linkes to your social media sites
-  deviant_art:
-  facebook:
-  github:
-  instagram:
-  twitter:
-  youtube:
+  deviant_art:    "deviantart.com"
+  facebook:       "facebook.com"
+  github:         "github.com"
+  instagram:      "instagram.com"
+  twitter:        "twitter.com"
+  youtube:        "youtube.com"
 
 # Collections
 collections:

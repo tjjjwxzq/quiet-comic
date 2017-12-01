@@ -39,6 +39,48 @@ header {
   }
 }
 
+// footer
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 5em 3em;
+  margin-bottom: 1em;
+
+  .bio-container {
+    h5 {
+      margin-bottom: 0;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    margin-left: auto;
+
+    li {
+      display: inline-block;
+      margin: 0.4rem;
+
+      a {
+        transition: opacity 0.4s ease-in-out;
+
+        &:after {
+          content: none;
+        }
+
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+
+  }
+}
+
 
 // home page
 .Home-img {
