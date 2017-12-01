@@ -15,6 +15,15 @@ body {
 
   color: $text-color;
   background-color: $background-color;
+
+  // Sticky footer
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 h6 {

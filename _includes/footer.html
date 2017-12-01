@@ -7,42 +7,42 @@
     {% if site.author.github %}
       <li>
         <a href="{{ site.author.github }}">
-          <img src="{{ site.base_image_dir }}github-icon.svg" />
+          <img src="{{ site.base_image_dir | append: 'github-icon.svg' | relative_url }}" />
         </a>
       </li>
     {% endif %}
     {% if site.author.deviant_art %}
       <li>
         <a href="{{ site.author.deviant_art }}">
-          <img src="{{ site.base_image_dir }}da-icon.svg" />
+          <img src="{{ site.base_image_dir | append: 'da-icon.svg' | relative_url}}" />
         </a>
       </li>
     {% endif %}
     {% if site.author.facebook %}
       <li>
         <a href="{{ site.author.facebook }}">
-          <img src="{{ site.base_image_dir }}fb-icon.svg" />
+          <img src="{{ site.base_image_dir | append: 'fb-icon.svg' | relative_url }}" />
         </a>
       </li>
     {% endif %}
     {% if site.author.instagram %}
       <li>
         <a href="{{ site.author.instagram }}">
-          <img src="{{ site.base_image_dir }}instagram-icon.svg" />
+          <img src="{{ site.base_image_dir | append: 'instagram-icon.svg' | relative_url }}" />
         </a>
       </li>
     {% endif %}
     {% if site.author.twitter %}
       <li>
         <a href="{{ site.author.twitter }}">
-          <img src="{{ site.base_image_dir }}twitter-icon.svg" />
+          <img src="{{ site.base_image_dir | append: 'twitter-icon.svg' | relative_url }}" />
         </a>
       </li>
     {% endif %}
     {% if site.author.youtube %}
       <li>
         <a href="{{ site.author.youtube }}">
-          <img src="{{ site.base_image_dir }}youtube-icon.svg" />
+          <img src="{{ site.base_image_dir | append: 'youtube-icon.svg' | relative_url }}" />
         </a>
       </li>
     {% endif %}
