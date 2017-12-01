@@ -41,6 +41,7 @@ To override these layouts, create a `_layouts` directory and a new file with the
 
 ### Includes
 - `head.html` - defines the `<head></head>` tag used in the `default` layout
+- `seo.html` - bunch of tags for SEO included in `head.html`
 - `header.html` - defines the site's main header with a responsive navbar
 - `footer.html` - site's footer with author bio and social media links (links will show up only if you specify a link to your social media sites in `_config.yml`)
 - `google-analytics` - code analytics inserted in the `default` layout (only active in production)
@@ -141,6 +142,12 @@ Note that if you change the source directories, you should also make the relevan
 This theme uses the `jekyll-feed` gem to generate an Atom feed for your posts (`feed.xml`) (if you are running a blog alongside your web comic). However this gem does not support feed for collections.
 
 This theme will create a feed for your comic pages (`pages_feed.xml`), artwork (`artwork_feed.xml`) and a combined feed for both (`combined_feed.xml`). The feed will sort your comic pages according to `page_number`, and your artworks according to `date` (so ensure that those variables are set in your frontmatter).
+
+### Syntax Highlighting
+This theme uses [rouge](https://github.com/jneen/rouge) for syntax highlighting (which is Jekyll's default highlighter). The syntax highlighting stylsheet uses the Zenburn theme. To override the theme, create a `_sass/syntax_highlighting.scss` file, put in your desired styles, and import it before the `quiet_comic` stylesheet in `assets/main.scss`. You can find other syntax highlighting styles here: [http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html).
+
+### SEO
+A set of meta tags for SEO are included in `<head></head>`. To see what's included, check out the source file `_includes/seo.html` (Do `bundle open quiet-comic` to open the gem source). Config that affects the output of these SEO tags can be found in `_config.yml`.
 
 ## Contributing
 
