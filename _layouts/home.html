@@ -4,7 +4,12 @@ layout: "default"
 
 <div class="Grid Grid--gutters">
   <div class="Grid-cell">
-    <div class="Home-img">Main image</div>
+    <div class="Home-img">
+      Main image
+      <a href="{{ "combined_feed.xml" | relative_url }}" class="main-feed-link">
+        <img src="{{ site.base_image_dir }}feed-icon.svg">
+      </a>
+    </div>
   </div>
 </div>
 

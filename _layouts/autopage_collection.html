@@ -36,6 +36,14 @@ layout: default
     {% endfor %}
   </div>
 
+  {% if collection == "pages" %}
+    <a href="{{ "pages_feed.xml" | relative_url }}">Subscribe</a>
+  {% elsif collection == "artworks" %}
+    <a href="{{ "artworks_feed.xml" | relative_url }}">Subscribe</a>
+  {% endif %}
+
+  &middot;
+
   {% if paginator.total_pages > 1 %}
     <ul class="pager">
       {% if paginator.previous_page %}

@@ -46,6 +46,26 @@ header {
   // temporary color
   background-color: hsla(31, 15%, 50%, 0.1);
   margin-top: -$min-header-height;
+
+  .main-feed-link {
+    width: 30px;
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    transition: opacity 0.4s ease-in-out;
+
+    &:after {
+      content: none;
+    }
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 // pages and gallery
@@ -103,6 +123,7 @@ header {
 
 .pager {
   list-style: none;
+  display: inline-block;
 
   li {
     display: inline-block;
