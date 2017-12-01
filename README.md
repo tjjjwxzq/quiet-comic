@@ -1,6 +1,6 @@
 # Quiet Comic
 
-A simple webcomic theme with pagination support for you comic pages and any related art (that isn't part of the comic itself).
+A simple webcomic theme with pagination support for your comic pages and any related art (that isn't part of the actual comic itself).
 
 ## Installation
 
@@ -32,19 +32,21 @@ The layouts are:
 
 - `default.html` - base layout for all layouts. Sets the doctype, `<head>` element, and a header include.
 - `home.html` - landing page with a full screen div for your beautiful cover art
-- `pages.html` - index page for all your comic pages
 - `page.html` - a single comic page
-- `gallery.html` - index page for related artworks that are not pages in the comic (concept art, character art etc)
 - `artwork.html` - a single artwork page
+- `autopage_collection.html` - this is used by the AutoPages feature of the `jekyll-paginate-v2` gem to generate a paginated index for comic pages as well as artworks (or any collections you care to add to your website)
+- `post.html` - a very minimal layout for blog posts. If you really want proper blog posts on your website, make sure to override and style this layout properly (blog posts are not the focus of this theme, however - jekyll just provides this functionality by default)
 
 To override these layouts, create a `_layouts` directory and a new file with the name corresponding to the layout you want to override (eg. `_layouts/home.html`).
 
 ### Includes
 - `head.html` - defines the `<head></head>` tag used in the `default` layout
 - `header.html` - defines the site's main header with a responsive navbar
-- `google-analytics` - inserts google analytics (only active in production)
-- `facebook-comments` - code for facebook comment box
-
+- `footer.html` - site's footer with author bio and social media links (links will show up only if you specify a link to your social media sites in `_config.yml`)
+- `google-analytics` - code analytics inserted in the `default` layout (only active in production)
+- `comments` - code for facebook comment box
+- `facebook_javascript_sdk.html` - code for including the Facebook Javascript SDK in the `default` layout
+- `collection_feed.xml` - used to generate an Atom feed for each of your collections. You need to create a `<collection>_feed.xml` in your root folder for the feed file to be generated
 
 ### Sass
 To override the Sass in this theme, create a `_sass` directory and add your desired sass files. Then, create a `assets/main.scss` file and import your files as well as the theme's stylesheet:
@@ -58,8 +60,6 @@ To override the Sass in this theme, create a `_sass` directory and add your desi
 ### Collections
 
 #### Pages
-You can name your pages something like`<page number>-<title>.<extension>`. Alternatively, you can do something like `<date>-<title>.<extension>` similar to how you would name a jekyll post. Or actually, name them however you like, because your pages are going to be sorted by the `page_number` field specified in your front matter anyway.
-
 You should at minimum include the following font matter in your page:
 
 ```
@@ -69,12 +69,14 @@ image: 'path/to/comic/strip/image'
 ---
 ```
 
+Your pages will be sorted on the `page_number` variable so it must be included.
+
 The `page_number` will be displayed on the page itself, and, depending on your config, in the pages index on the thumbnail for that page (see how to generate your thumbnail images [here](#thumbnails)).
 
-The `image` should be the path to the comic strip file itself, relative to the base image directory. The default base image directory for comic pages is `assets/images/pages`. If you would like to change the directory name, you can set the following in your config:
+The `image` should be the path to the comic strip file itself, relative to the base image directory. The base image directory for comic pages is `<base_image_dir>/pages`. Since the default base image directory is `assets/images`, this will be `assets/images/pages`. If you would like to change the base directory name, you can set the following in your config:
 
 ```yaml
-pages_image_dir: '/new/path/to/images/directory'
+base_image_dir: '/new/path/to/images/directory'
 ```
 
 You can optionally include a `title`, `date` key (it's recommended), and this will be displayed on the page alongside the `page_number`.
@@ -108,10 +110,10 @@ image: "path/to/image/file"
 
 The date is required to sort your artworks in chronological order (when displayed in the gallery page as well as in the feed). Note that it must be written in the `YYYY-MM-DD` ISO 8601 format for it to be recognized as a `Date` by Jekyll (or it will end up a string and sorting won't work as expected).
 
-The `image` should be the path to the artwork file itself, relative to the base image directory. The default base image directory for artworks is `assets/images/artworks`. If you would like to change the directory name, you can set the following in your config:
+The `image` should be the path to the artwork file itself, relative to the base image directory. The base image directory for artworks is `<base_image_dir>/artworks`. Since the default base image directory is `assets/images`, this will be `assets/images/pages`. If you would like to change the directory name, you can set the following in your config:
 
 ```yaml
-artworks_image_dir: '/new/path/to/images/directory'
+base_image_dir: '/new/path/to/images/directory'
 ```
 
 ### <a name="thumbnails">Thumbnails</a>
@@ -133,12 +135,12 @@ mini_magick:
 
 (For the `crop` option, the value must be of the form `width x height + x-offset + y-offset`. The offsets are mandatory, or minimagick will throw an error)
 
-Note that if you change the source directories, you should also make the relevant changes to the `base_image_dir`, `pages_image_dir` and `artworks_image_dir`.
+Note that if you change the source directories, you should also make the relevant changes to the `base_image_dir`.
 
 ### Feed
-This theme uses the `jekyll-feed` gem to generate an Atom feed for your posts (if you are running a blog alongside your web comic). However this gem does not support feed for collections.
+This theme uses the `jekyll-feed` gem to generate an Atom feed for your posts (`feed.xml`) (if you are running a blog alongside your web comic). However this gem does not support feed for collections.
 
-This theme will create a feed for your comic pages (`pages/feed.xml`) as well as artwork (`artwork/feed.xml`). The feed will sort your comic pages according to `page_number`, and your artworks according to `date` (so ensure that those variables are set in your frontmatter).
+This theme will create a feed for your comic pages (`pages_feed.xml`), artwork (`artwork_feed.xml`) and a combined feed for both (`combined_feed.xml`). The feed will sort your comic pages according to `page_number`, and your artworks according to `date` (so ensure that those variables are set in your frontmatter).
 
 ## Contributing
 
@@ -155,6 +157,10 @@ To add a custom directory to your theme-gem, please edit the regexp in `quiet-co
 
 ### TODO
 1. Figure out image thumbnails in feed
+3. Test-run the theme and check which should be spec files
+4. Home page copy
+5. Home page illustration and six simple comic pages
+6. One simple artwork
 
 ## License
 
