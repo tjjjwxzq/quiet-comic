@@ -8,7 +8,16 @@
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  {% feed_meta %}
+
+  <!-- comic pages feed -->
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} - Pages Feed" href="{{ "pages_feed.xml" | relative_url }}">
+  <!-- artworks feed -->
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} - Artworks Feed" href="{{ "artworks_feed.xml" | relative_url }}">
+  <!-- combined feed -->
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} - Pages and Artworks Feed" href="{{ "combined_feed.xml" | relative_url }}">
+  <!-- blog feed -->
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} - Blog Feed" href="{{ "feed.xml" | relative_url }}">
+
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google_analytics.html %}
