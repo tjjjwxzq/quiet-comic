@@ -1,6 +1,6 @@
 # Quiet Comic
 
-A simple webcomic theme with pagination support for your comic pages and any related art (that isn't part of the actual comic itself).
+A simple webcomic theme with pagination support for your comic pages and any related art.
 
 ## Installation
 
@@ -10,13 +10,7 @@ Add this line to your Jekyll site's `Gemfile`:
 gem "quiet-comic"
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: quiet-comic
-```
-
-And then execute:
+Then copy the [theme's default `_config.yml`](https://github.com/tjjjwxzq/quiet-comic/blob/master/_config.yml) into your Jekyll site's `_config.yml`, and then execute:
 
     $ bundle
 
@@ -25,6 +19,35 @@ Or install it yourself as:
     $ gem install quiet-comic
 
 ## Usage
+
+### Getting Started
+
+#### Base Config
+If you haven't already, copy the [theme's default `_config.yml`](https://github.com/tjjjwxzq/quiet-comic/blob/master/_config.yml) into your Jekyll site's `_config.yml`.
+
+#### Collection folders
+Next, you'll need create a `_pages` and `_artworks` folder for your collection of comic pages and related artworks. You can copy the `_artworks` and `_pages` folder from the theme's source (it comes with some demo content). To locate where the theme gem is installed on your system, you can do
+
+```bash
+bundle show quiet-comic
+```
+
+in your project directory.
+
+If you run your website now you should be able to visit all the basic pages without any 404 errors.
+
+#### Image Thumbnails
+The asset files (images, fonts, stylesheets) from the theme are included implicitly. However, at this point, you will not be able to see the thumbnail images for the pages and the artworks (if you visit the `/pages` and `/artworks` page). The reason is that this theme uses `jekyll-minimagick` to generate thumbnails, but `jekyll-minimagick` only searches the `assets` directory of *your* project directory to generate the thumbnails, not the gem theme's.
+
+So for the thumbnails to show up properly, you should create an `assets/images/artworks` and `assets/images/pages` directory, and put in your desired images. (Again, you can copy the demo images from the gem source).
+
+#### Feed templates
+Unfortunately there is as yet no way to implicitly include files from gem-based themes other than the `_layouts`, `_includes`, `_sass` and `assets` directories (and thus also no way to update them cleanly through the gem system). So you have to do some manual work to set up feeds for your comic pages and artworks.
+
+Just copy the [theme's `pages_feed.xml`](https://github.com/tjjjwxzq/quiet-comic/blob/master/pages_feed.xml) into a `pages_feed.xml` file in your root directory, the [theme's `artworks_feed.xml`](https://github.com/tjjjwxzq/quiet-comic/blob/master/artworks_feed.xml) into a `artworks_feed.xml` file in your root directory, and the [theme's `combined_feed.xml`](https://github.com/tjjjwxzq/quiet-comic/blob/master/combined_feed.xml) into a `combined_feed.xml` file in your root directory. Then jekyll should generate all the feed files correctly, and include their links in your site `<head></head>`.
+
+### Configuration
+Please copy and paste the [theme's default `_config.yml` file](https://github.com/tjjjwxzq/quiet-comic/blob/master/_config.yml) into your own and customize any of the variables you wish.
 
 ### Layouts
 
@@ -165,9 +188,10 @@ To add a custom directory to your theme-gem, please edit the regexp in `quiet-co
 ### TODO
 1. Figure out image thumbnails in feed
 3. Test-run the theme and check which should be spec files
-4. Home page copy
 5. Home page illustration and six simple comic pages
 6. One simple artwork
+7. Support grouping pages into chapters
+8. Write a setup script
 
 ## License
 

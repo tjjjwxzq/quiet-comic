@@ -7,7 +7,7 @@ layout: "default"
     <div class="Home-img">
       Main image
       <a href="{{ "combined_feed.xml" | relative_url }}" class="main-feed-link">
-        <img src="{{ site.base_image_dir }}feed-icon.svg">
+        <img src="{{ site.base_image_dir | append: "feed-icon.svg" | relative_url }}">
       </a>
     </div>
   </div>

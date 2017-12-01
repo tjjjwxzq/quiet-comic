@@ -77,6 +77,9 @@ collections:
     permalink:    /:collection/:path/
     layout:       default
 
+# theme
+theme: quiet-comic
+
 # Markdown Processing
 markdown: kramdown
 highlighter: rouge
