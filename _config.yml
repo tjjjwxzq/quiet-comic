@@ -48,7 +48,9 @@ author:
   name:           "Your Name"
   bio:
   email:
-  uri:
+  uri: # link to your home page
+  # linkes to your social media sites
+  deviant_art:
   facebook:
   github:
   instagram:
@@ -82,6 +84,7 @@ plugins:
   -               jekyll-sitemap
   -               jekyll-feed
   -               jekyll-minimagick
+  -               jekyll-last-modified-at
 
 # Defaults
 defaults:
