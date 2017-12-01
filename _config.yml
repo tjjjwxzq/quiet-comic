@@ -69,6 +69,8 @@ collections:
     layout:       default
 
 # Markdown Processing
+markdown: kramdown
+highlighter: rouge
 kramdown:
   input:          GFM
 
@@ -85,6 +87,7 @@ plugins:
   -               jekyll-feed
   -               jekyll-minimagick
   -               jekyll-last-modified-at
+  -               jemoji
 
 # Defaults
 defaults:

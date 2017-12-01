@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-feed"
   spec.add_runtime_dependency "jekyll-minimagick"
   spec.add_runtime_dependency "jekyll-last-modified-at"
+  spec.add_runtime_dependency "jemoji"
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
