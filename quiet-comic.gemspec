@@ -7,18 +7,18 @@ Gem::Specification.new do |spec|
   spec.email         = ["aquietimmanence@gmail.com"]
 
   spec.summary       = %q{A simple webcomic Jekyll theme.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/tjjjwxzq/quiet-comic"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_pages|_artworks|_sass|LICENSE|README|pages_feed.xml|artworks_feed.xml)}i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_pages|_artworks|_sass|LICENSE|README|pages_feed.xml|artworks_feed.xml|_config.yml)}i) }
 
   spec.add_runtime_dependency "jekyll", "~> 3.6"
-  spec.add_runtime_dependency "jekyll-paginate-v2"
-  spec.add_runtime_dependency "jekyll-sitemap"
-  spec.add_runtime_dependency "jekyll-feed"
-  spec.add_runtime_dependency "jekyll-minimagick"
-  spec.add_runtime_dependency "jekyll-last-modified-at"
-  spec.add_runtime_dependency "jemoji"
+  spec.add_runtime_dependency "jekyll-paginate-v2", "~> 1.9"
+  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.1"
+  spec.add_runtime_dependency "jekyll-feed", "~> 0.9"
+  spec.add_runtime_dependency "jekyll-minimagick", "~> 0"
+  spec.add_runtime_dependency "jekyll-last-modified-at", "~> 1"
+  spec.add_runtime_dependency "jemoji", "~> 0.8"
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
