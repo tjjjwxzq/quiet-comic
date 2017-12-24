@@ -86,11 +86,12 @@ You should at minimum include the following font matter in your page:
 ```
 ---
 page_number: 1
+date: 'YYYY-MM-DD'
 image: 'path/to/comic/strip/image'
 ---
 ```
 
-Your pages will be sorted on the `page_number` variable so it must be included.
+Your pages will be sorted on the paginated index page (`/pages`) by the `page_number` variable so it must be included. Also, jekyll seems to set the `page.next` and `page-previous` using a default ordering based on date, is not configurable at the moment, so you should add a date if you want your next and prev links to work properly.
 
 The `page_number` will be displayed on the page itself, and, depending on your config, in the pages index on the thumbnail for that page (see how to generate your thumbnail images [here](#thumbnails)).
 
