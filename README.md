@@ -183,12 +183,12 @@ When your theme is released, only the files in `_layouts`, `_includes`, `_sass` 
 To add a custom directory to your theme-gem, please edit the regexp in `quiet-comic.gemspec` accordingly.
 
 ### TODO
--[X] Write a setup script
--[] Figure out image thumbnails in feed
--[] Home page illustration
--[] Six Comic pages
--[] One artwork
--[] Support grouping pages into chapters
+- [X] Write a setup script
+- [] Figure out image thumbnails in feed
+- [] Home page illustration
+- [] Six Comic pages
+- [] One artwork
+- [] Support grouping pages into chapters
 
 ## License
 
