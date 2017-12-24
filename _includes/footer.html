@@ -1,6 +1,10 @@
 <footer>
   <div class="bio-container">
-    <h5>{{ site.title }}</h5>
+    <h5>{{ site.title }}
+      <a href="{{ "combined_feed.xml" | relative_url }}" class="main-feed-link">
+        <img src="{{ site.base_image_dir | append: "feed-icon.svg" | relative_url }}">
+      </a>
+    </h5>
     <p><strong>{{ site.author.name }}</strong> &middot; {{ site.author.bio }}</p>
   </div>
   <ul class="social-links">

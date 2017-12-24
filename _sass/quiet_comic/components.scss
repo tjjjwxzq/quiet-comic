@@ -99,19 +99,23 @@ footer {
     position: absolute;
     bottom: 3rem;
     right: 3rem;
-    transition: opacity 0.4s ease-in-out;
+  }
 
-    &:after {
-      content: none;
-    }
+}
 
-    &:hover {
-      opacity: 0.4;
-    }
+.main-feed-link {
+  transition: opacity 0.4s ease-in-out;
 
-    img {
-      width: 100%;
-    }
+  &:after {
+    content: none;
+  }
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  img {
+    width: 30px;
   }
 }
 
