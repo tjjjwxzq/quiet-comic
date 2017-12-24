@@ -36,6 +36,10 @@ header {
         opacity: 0.5;
       }
     }
+
+    img {
+      height: 70px;
+    }
   }
 }
 
@@ -183,6 +187,10 @@ footer {
   margin-right: 2em;
 }
 
+#width-50, #width-75, #width-100 {
+  margin: 0 auto;
+}
+
 #width-50 {
   flex: 0 0 50%;
   display: none;
@@ -209,10 +217,6 @@ footer {
   }
 }
 
-.main-image {
-  margin: auto;
-}
-
 #width-100 {
   flex: 0 0 100%;
 
@@ -221,6 +225,9 @@ footer {
   }
 }
 
+.main-image {
+  margin: auto;
+}
 // comments
 .comments-container {
   margin: 5em 0;

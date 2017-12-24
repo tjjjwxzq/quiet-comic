@@ -37,6 +37,19 @@ layout: default
     <img id="width-75" src="{{ site.base_image_dir | relative_url }}pages/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell main-image">
 
     <img id="width-100" src="{{ site.base_image_dir | relative_url }}pages/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell main-image">
+
+    <ul class="Grid-cell pager">
+      {% if page.previous %}
+        <li class="pager-previous">
+          <a href="{{ page.previous.url | relative_url}}">< Prev</a>
+        </li>
+      {% endif %}
+      {% if page.next %}
+        <li class="pager-next">
+          <a href="{{ page.next.url | relative_url}}">Next ></a>
+        </li>
+      {% endif %}
+    </ul>
   </div>
 
   {{ content }}
