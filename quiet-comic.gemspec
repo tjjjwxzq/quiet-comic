@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "quiet-comic"
-  spec.version       = "0.2.0"
+  spec.version       = "0.2.1"
   spec.authors       = ["tjjjwxzq"]
   spec.email         = ["aquietimmanence@gmail.com"]
 
@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/tjjjwxzq/quiet-comic"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(_layouts|_includes|_sass|setup_files|LICENSE|README|pages_feed.xml|artworks_feed.xml|_config.yml)}i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(_layouts|_includes|_sass|setup_files|LICENSE|README|pages_feed.xml|artworks_feed.xml|combined_feed.xml|_config.yml)}i) }
   spec.executables << "quiet-comic-setup"
 
 
