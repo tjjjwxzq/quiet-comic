@@ -106,8 +106,6 @@ image: 'path/to/comic/strip/image'
 
 Your pages will be sorted on the paginated index page (`/pages`) by the `page_number` variable so it must be included. Also, jekyll seems to set the `page.next` and `page-previous` using a default ordering based on date, is not configurable at the moment, so you should add a date if you want your next and prev links to work properly.
 
-The `page_number` will be displayed on the page itself, and, depending on your config, in the pages index on the thumbnail for that page (see how to generate your thumbnail images [here](#thumbnails)).
-
 The `image` should be the path to the comic strip file itself, relative to the base image directory. The base image directory for comic pages is `<base_image_dir>/pages`. Since the default base image directory is `assets/images`, this will be `assets/images/pages`. If you would like to change the base directory name, you can set the following in your config:
 
 ```yaml
