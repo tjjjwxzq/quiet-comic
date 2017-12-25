@@ -1,0 +1,75 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+puts <<-EOS
+  Running this setup script will copy over the following files and folders
+  to your project directory and override them if they already exist:
+  1. _config.yml
+  2. _pages/
+  3. _artworks/
+  4. assets/
+  5. pages_feed.xml
+  6. artworks_feed.xml
+  7. combined_feed.xml
+
+  You will be prompted before each file is copied over.
+  To opt out of copying over and possibly overriding the file, hit 'N'
+
+EOS
+
+spec = Gem::Specification.find_by_name('quiet-comic')
+gem_root = spec.gem_dir
+
+NO_STRINGS =  %w[No no N n].freeze
+
+puts 'Are you sure you want to copy over `_config.yml` (Y/N)?'
+response = gets.chomp
+unless NO_STRINGS.include?(response)
+  puts 'Copying base theme `_config.yml...`'
+  FileUtils.cp(File.join(gem_root, '_config.yml'), '.')
+end
+puts ''
+
+puts 'Collection folders...'
+puts 'Are you sure you want to copy over `_pages` (Y/N)?'
+response = gets.chomp
+unless NO_STRINGS.include?(response)
+  puts '1. Copying over `_pages...`'
+  FileUtils.cp_r(File.join(gem_root, 'setup_files', '_pages'), '.')
+end
+puts 'Are you sure you want to copy over `_artworks` (Y/N)?'
+response = gets.chomp
+unless NO_STRINGS.include?(response)
+  puts '2. Copying over `_artworks...`'
+  FileUtils.cp_r(File.join(gem_root, 'setup_files', '_artworks'), '.')
+end
+puts ''
+
+puts 'Are you sure you want to copy over `assets` (Y/N)?'
+response = gets.chomp
+unless NO_STRINGS.include?(response)
+  puts 'Copying over `assets`...'
+  FileUtils.cp_r(File.join(gem_root, 'setup_files', 'assets'), '.')
+end
+puts ''
+
+puts 'Feed templates...'
+puts 'Are you sure you want to copy over `pages_feed.xml (Y/N)?`'
+response = gets.chomp
+unless NO_STRINGS.include?(response)
+  puts '1. Copying over `pages_feed.xml...`'
+  FileUtils.cp(File.join(gem_root, 'pages_feed.xml'), '.')
+end
+puts 'Are you sure you want to copy over `artworks_feed.xml (Y/N)?`'
+response = gets.chomp
+unless NO_STRINGS.include?(response)
+  puts '2. Copying over `artworks_feed.xml...`'
+  FileUtils.cp(File.join(gem_root, 'artworks_feed.xml'), '.')
+end
+puts 'Are you sure you want to copy over `combined_feed.xml (Y/N)?`'
+response = gets.chomp
+unless NO_STRINGS.include?(response)
+  puts '3. Copying over `combined_feed.xml...`'
+  FileUtils.cp(File.join(gem_root, 'combined_feed.xml'), '.')
+end

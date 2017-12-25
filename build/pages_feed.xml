@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator>
+  <link href="/pages_feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2017-12-25T17:34:21+08:00</updated>
+  <id>/</id>
+
+  
+  <title type="html">My quiet webcomic</title>
+  
+
+  
+  <subtitle>A quiet webcomic</subtitle>
+  
+
+  
+  <author>
+    <name>Your Name</name>
+    
+    
+  </author>
+  
+
+  
+  
+
+  
+  <entry>
+    <title>
+      
+      2
+      
+    </title>
+    <link href="/pages/demo-0/" rel="alternate" type="text/html" title="Special Comic Page" />
+    
+    <published>2017-11-30T00:00:00+08:00</published>
+    
+    <updated>2017-11-30T21:50:38+08:00</updated>
+    <id>/pages/demo-0</id>
+    <content type="html" xml:base="">
+      &lt;h1 id=&quot;hello&quot;&gt;Hello!&lt;/h1&gt;
+    </content>
+
+    <author>
+      <name>Your Name</name>
+      
+      
+    </author>
+
+    
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/placeholder-page.jpg" />
+
+  </entry>
+  
+  <entry>
+    <title>
+      
+      1
+      
+    </title>
+    <link href="/pages/demo/" rel="alternate" type="text/html" title="Demo Comic Page" />
+    
+    <published>2017-12-25T17:34:21+08:00</published>
+    
+    <updated>2017-11-30T15:09:10+08:00</updated>
+    <id>/pages/demo</id>
+    <content type="html" xml:base="">
+      &lt;h1 id=&quot;hello&quot;&gt;Hello!&lt;/h1&gt;
+    </content>
+
+    <author>
+      <name>Your Name</name>
+      
+      
+    </author>
+
+    
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/placeholder-page.jpg" />
+
+  </entry>
+  
+  <entry>
+    <title>
+      
+      1
+      
+    </title>
+    <link href="/pages/demo-9/" rel="alternate" type="text/html" title="Demo Comic Page" />
+    
+    <published>2017-12-25T17:34:21+08:00</published>
+    
+    <updated>2017-11-30T15:09:10+08:00</updated>
+    <id>/pages/demo-9</id>
+    <content type="html" xml:base="">
+      &lt;h1 id=&quot;hello&quot;&gt;Hello!&lt;/h1&gt;
+    </content>
+
+    <author>
+      <name>Your Name</name>
+      
+      
+    </author>
+
+    
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/placeholder-page.jpg" />
+
+  </entry>
+  
+  <entry>
+    <title>
+      
+      1
+      
+    </title>
+    <link href="/pages/demo-8/" rel="alternate" type="text/html" title="Demo Comic Page" />
+    
+    <published>2017-12-25T17:34:21+08:00</published>
+    
+    <updated>2017-11-30T15:09:10+08:00</updated>
+    <id>/pages/demo-8</id>
+    <content type="html" xml:base="">
+      &lt;h1 id=&quot;hello&quot;&gt;Hello!&lt;/h1&gt;
+    </content>
+
+    <author>
+      <name>Your Name</name>
+      
+      
+    </author>
+
+    
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/placeholder-page.jpg" />
+
+  </entry>
+  
+  <entry>
+    <title>
+      
+      1
+      
+    </title>
+    <link href="/pages/demo-7/" rel="alternate" type="text/html" title="Demo Comic Page" />
+    
+    <published>2017-12-25T17:34:21+08:00</published>
+    
+    <updated>2017-11-30T15:09:10+08:00</updated>
+    <id>/pages/demo-7</id>
+    <content type="html" xml:base="">
+      &lt;h1 id=&quot;hello&quot;&gt;Hello!&lt;/h1&gt;
+    </content>
+
+    <author>
+      <name>Your Name</name>
+      
+      
+    </author>
+
+    
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/placeholder-page.jpg" />
+
+  </entry>
+  
+  <entry>
+    <title>
+      
+      1
+      
+    </title>
+    <link href="/pages/demo-6/" rel="alternate" type="text/html" title="Demo Comic Page" />
+    
+    <published>2017-12-25T17:34:21+08:00</published>
+    
+    <updated>2017-11-30T15:09:10+08:00</updated>
+    <id>/pages/demo-6</id>
+    <content type="html" xml:base="">
+      &lt;h1 id=&quot;hello&quot;&gt;Hello!&lt;/h1&gt;
+    </content>
+
+    <author>
+      <name>Your Name</name>
+      
+      
+    </author>
+
+    
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/placeholder-page.jpg" />
+
+  </entry>
+  
+  <entry>
+    <title>
+      
+      1
+      
+    </title>
+    <link href="/pages/demo-5/" rel="alternate" type="text/html" title="Demo Comic Page" />
+    
+    <published>2017-12-25T17:34:21+08:00</published>
+    
+    <updated>2017-11-30T15:09:10+08:00</updated>
+    <id>/pages/demo-5</id>
+    <content type="html" xml:base="">
+      &lt;h1 id=&quot;hello&quot;&gt;Hello!&lt;/h1&gt;
+    </content>
+
+    <author>
+      <name>Your Name</name>
+      
+      
+    </author>
+
+    
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/placeholder-page.jpg" />
+
+  </entry>
+  
+  <entry>
+    <title>
+      
+      1
+      
+    </title>
+    <link href="/pages/demo-4/" rel="alternate" type="text/html" title="Demo Comic Page" />
+    
+    <published>2017-12-25T17:34:21+08:00</published>
+    
+    <updated>2017-11-30T15:09:10+08:00</updated>
+    <id>/pages/demo-4</id>
+    <content type="html" xml:base="">
+      &lt;h1 id=&quot;hello&quot;&gt;Hello!&lt;/h1&gt;
+    </content>
+
+    <author>
+      <name>Your Name</name>
+      
+      
+    </author>
+
+    
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/placeholder-page.jpg" />
+
+  </entry>
+  
+  <entry>
+    <title>
+      
+      1
+      
+    </title>
+    <link href="/pages/demo-3/" rel="alternate" type="text/html" title="Demo Comic Page" />
+    
+    <published>2017-12-25T17:34:21+08:00</published>
+    
+    <updated>2017-11-30T15:09:10+08:00</updated>
+    <id>/pages/demo-3</id>
+    <content type="html" xml:base="">
+      &lt;h1 id=&quot;hello&quot;&gt;Hello!&lt;/h1&gt;
+    </content>
+
+    <author>
+      <name>Your Name</name>
+      
+      
+    </author>
+
+    
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/placeholder-page.jpg" />
+
+  </entry>
+  
+  <entry>
+    <title>
+      
+      1
+      
+    </title>
+    <link href="/pages/demo-2/" rel="alternate" type="text/html" title="Demo Comic Page" />
+    
+    <published>2017-12-25T17:34:21+08:00</published>
+    
+    <updated>2017-11-30T15:09:10+08:00</updated>
+    <id>/pages/demo-2</id>
+    <content type="html" xml:base="">
+      &lt;h1 id=&quot;hello&quot;&gt;Hello!&lt;/h1&gt;
+    </content>
+
+    <author>
+      <name>Your Name</name>
+      
+      
+    </author>
+
+    
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/placeholder-page.jpg" />
+
+  </entry>
+  
+</feed>
+
