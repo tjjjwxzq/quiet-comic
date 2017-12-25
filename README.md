@@ -44,7 +44,18 @@ This will give you a base config file to work out from, the necessary folders (w
 You probably only want to run this script on a fresh project, because it may override any existing files and folders with the same name, that you may have modified/worked on, if you let it. But the script will prompt you before copying each file, so you can feel free to skip some files while copying over others, should you want to 'reset' any file after messing something up.
 
 ### Configuration
-Please copy and paste the [theme's default `_config.yml` file](https://github.com/tjjjwxzq/quiet-comic/blob/master/_config.yml) into your own and customize any of the variables you wish.
+Please copy and paste the [theme's default `_config.yml` file](https://github.com/tjjjwxzq/quiet-comic/blob/master/_config.yml) into your own and customize any of the variables you wish (best to use the setup script as detailed in the previous section).
+
+### Home Page
+The home page of this theme expects a main image that will cover the whole screen (set by the `main_image` key in `_config.yml`). You can also a specify a mobile-optimized main image with the `mobile-main-image` key. If you leave it out it will default to whatever was set for `main_image`.
+
+By default the header for this theme will include a brand image which links to the home page (if you set it in the `brand_image` key in `_config.yml`) on every page. If you don't want this to show up on the home page, set the following in the frontmatter of `index.md`:
+
+```
+---
+is_home: true
+---
+```
 
 ### Layouts
 

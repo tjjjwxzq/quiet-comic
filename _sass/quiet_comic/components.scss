@@ -84,8 +84,6 @@ footer {
 // home page
 .Home-img {
   min-height: 100vh;
-  // temporary color
-  background-color: hsla(31, 15%, 50%, 0.1);
   background-size: cover;
   margin-top: -$min-header-height;
 
@@ -95,7 +93,6 @@ footer {
     bottom: 3rem;
     right: 3rem;
   }
-
 }
 
 .main-feed-link {
