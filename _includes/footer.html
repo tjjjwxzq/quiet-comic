@@ -1,54 +1,57 @@
-<footer>
-  <div class="bio-container">
-    <h5>{{ site.title }}
-      <a href="{{ "combined_feed.xml" | relative_url }}" class="main-feed-link">
-        <img src="{{ site.base_image_dir | append: "feed-icon.svg" | relative_url }}">
-      </a>
-    </h5>
-    <p><strong>{{ site.author.name }}</strong> &middot; {{ site.author.bio }}</p>
+<footer class="Container--fluid">
+  <div class="Grid Grid--gutters sm-Grid--1of1 md-Grid--fit">
+    <div class="Grid-cell bio-container">
+      <h5>{{ site.title }}
+        <a href="{{ "combined_feed.xml" | relative_url }}" class="main-feed-link">
+          <img src="{{ site.base_image_dir | append: "feed-icon.svg" | relative_url }}">
+        </a>
+      </h5>
+      <p><strong>{{ site.author.name }}</strong> &middot; {{ site.author.bio }}</p>
+    </div>
+
+    <ul class="Grid-cell social-links">
+      {% if site.author.github %}
+        <li>
+          <a href="{{ site.author.github }}">
+            <img src="{{ site.base_image_dir | append: 'github-icon.svg' | relative_url }}" />
+          </a>
+        </li>
+      {% endif %}
+      {% if site.author.deviant_art %}
+        <li>
+          <a href="{{ site.author.deviant_art }}">
+            <img src="{{ site.base_image_dir | append: 'da-icon.svg' | relative_url}}" />
+          </a>
+        </li>
+      {% endif %}
+      {% if site.author.facebook %}
+        <li>
+          <a href="{{ site.author.facebook }}">
+            <img src="{{ site.base_image_dir | append: 'fb-icon.svg' | relative_url }}" />
+          </a>
+        </li>
+      {% endif %}
+      {% if site.author.instagram %}
+        <li>
+          <a href="{{ site.author.instagram }}">
+            <img src="{{ site.base_image_dir | append: 'instagram-icon.svg' | relative_url }}" />
+          </a>
+        </li>
+      {% endif %}
+      {% if site.author.twitter %}
+        <li>
+          <a href="{{ site.author.twitter }}">
+            <img src="{{ site.base_image_dir | append: 'twitter-icon.svg' | relative_url }}" />
+          </a>
+        </li>
+      {% endif %}
+      {% if site.author.youtube %}
+        <li>
+          <a href="{{ site.author.youtube }}">
+            <img src="{{ site.base_image_dir | append: 'youtube-icon.svg' | relative_url }}" />
+          </a>
+        </li>
+      {% endif %}
+    </ul>
   </div>
-  <ul class="social-links">
-    {% if site.author.github %}
-      <li>
-        <a href="{{ site.author.github }}">
-          <img src="{{ site.base_image_dir | append: 'github-icon.svg' | relative_url }}" />
-        </a>
-      </li>
-    {% endif %}
-    {% if site.author.deviant_art %}
-      <li>
-        <a href="{{ site.author.deviant_art }}">
-          <img src="{{ site.base_image_dir | append: 'da-icon.svg' | relative_url}}" />
-        </a>
-      </li>
-    {% endif %}
-    {% if site.author.facebook %}
-      <li>
-        <a href="{{ site.author.facebook }}">
-          <img src="{{ site.base_image_dir | append: 'fb-icon.svg' | relative_url }}" />
-        </a>
-      </li>
-    {% endif %}
-    {% if site.author.instagram %}
-      <li>
-        <a href="{{ site.author.instagram }}">
-          <img src="{{ site.base_image_dir | append: 'instagram-icon.svg' | relative_url }}" />
-        </a>
-      </li>
-    {% endif %}
-    {% if site.author.twitter %}
-      <li>
-        <a href="{{ site.author.twitter }}">
-          <img src="{{ site.base_image_dir | append: 'twitter-icon.svg' | relative_url }}" />
-        </a>
-      </li>
-    {% endif %}
-    {% if site.author.youtube %}
-      <li>
-        <a href="{{ site.author.youtube }}">
-          <img src="{{ site.base_image_dir | append: 'youtube-icon.svg' | relative_url }}" />
-        </a>
-      </li>
-    {% endif %}
-  </ul>
-</footer>
+  </footer>

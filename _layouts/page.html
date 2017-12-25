@@ -4,39 +4,43 @@ layout: default
 
 <div class="Container--fixed">
   <div class="Grid Grid--1of1">
-    <h3 class="Grid-cell page-header">
-      {{ page.page_number }} - {{ page.title }}
-      <small class="header-date">
-        {{ page.date | date: '%B %d %Y' }}
-      </small>
 
-      <small class="size-buttons-container">
-        Zoom -
-        <a href="#width-100">100%</a> &middot;
-        <a href="#width-75">75%</a> &middot;
-        <a href="#width-50">50%</a>
-      </small>
-      <small class="pager-container">
-        <ul class="pager">
+    <div class="Grid-cell">
+      <h3>
+        {{ page.title }}
+        <time class="header-date">
+          {{ page.date | date: '%B %d %Y' }}
+        </time>
+      </h3>
+    </div>
+
+    <div class="Grid-cell pager-and-size">
+      <div class="Grid sm-Grid--1of1 md-Grid--1of2">
+        <ul class="Grid-cell pager">
           {% if page.previous %}
-            <li class="pager-previous">
-              <a href="{{ page.previous.url | relative_url}}">< Prev</a>
-            </li>
+            <li><a href="{{ page.previous.url | relative_url}}">< Prev</a></li>
           {% endif %}
           {% if page.next %}
-            <li class="pager-next">
-              <a href="{{ page.next.url | relative_url}}">Next ></a>
-            </li>
+            <li><a href="{{ page.next.url | relative_url}}">Next ></a></li>
           {% endif %}
         </ul>
-      </small>
-    </h3>
 
-    <img id="width-50" src="{{ site.base_image_dir | relative_url }}pages/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell main-image">
+        <ul class="Grid-cell size-buttons">
+          Zoom -
+          <li><a href="#width-100">100%</a></li> &middot;
+          <li><a href="#width-75">75%</a></li> &middot;
+          <li><a href="#width-50">50%</a></li>
+        </ul>
+      </div>
+    </div>
 
-    <img id="width-75" src="{{ site.base_image_dir | relative_url }}pages/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell main-image">
+    <div class="Grid-cell">
+      <img id="width-50" src="{{ site.base_image_dir | relative_url }}pages/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell main-image">
 
-    <img id="width-100" src="{{ site.base_image_dir | relative_url }}pages/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell main-image">
+      <img id="width-75" src="{{ site.base_image_dir | relative_url }}pages/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell main-image">
+
+      <img id="width-100" src="{{ site.base_image_dir | relative_url }}pages/{{ page.image }}" alt="{{ page.title }}" class="Grid-cell main-image">
+    </div>
 
     <ul class="Grid-cell pager">
       {% if page.previous %}

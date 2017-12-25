@@ -45,12 +45,6 @@ header {
 
 // footer
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  margin: 5em 3em;
-  margin-bottom: 1em;
-
   .bio-container {
     h5 {
       margin-bottom: 0;
@@ -59,7 +53,8 @@ footer {
 
   .social-links {
     display: flex;
-    margin-left: auto;
+    flex-wrap: wrap;
+    justify-content: center;
 
     li {
       display: inline-block;
@@ -153,24 +148,24 @@ footer {
   transition: opacity 0.4s ease-in-out;
 }
 
-// page and artwork
-.page-header, .artwork-header {
-  display: flex;
-  align-items: stretch;
-}
-
 .header-date {
   color: $text-color-light;
   font-size: 0.7em;
-  align-self: center;
   margin-left: 1em;
-  margin-right: 1.5em;
 }
 
-.pager-container,
-.size-buttons-container {
-  font-size: 0.5em;
-  align-self: center;
+.size-buttons{
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
+}
+
+@media (min-width: $break-md) {
+  .size-buttons {
+    text-align: right;
+  }
 }
 
 .pager {
@@ -186,18 +181,17 @@ footer {
   }
 }
 
-
-.size-buttons-container {
-  margin-left: auto;
-  margin-right: 2em;
+.pager-and-size ul {
+  margin-top: 0;
 }
+
 
 #width-50, #width-75, #width-100 {
   margin: 0 auto;
 }
 
 #width-50 {
-  flex: 0 0 50%;
+  width: 50%;
   display: none;
 
   &:target {
@@ -210,7 +204,7 @@ footer {
 }
 
 #width-75 {
-  flex: 0 0 75%;
+  width: 75%;
   display: none;
 
   &:target {
@@ -223,7 +217,7 @@ footer {
 }
 
 #width-100 {
-  flex: 0 0 100%;
+  width: 100%;
 
   &:target {
     display: block;
