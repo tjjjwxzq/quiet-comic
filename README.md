@@ -170,6 +170,13 @@ This theme uses [rouge](https://github.com/jneen/rouge) for syntax highlighting 
 ### SEO
 A set of meta tags for SEO are included in `<head></head>`. To see what's included, check out the source file `_includes/seo.html` (Do `bundle open quiet-comic` to open the gem source). Config that affects the output of these SEO tags can be found in `_config.yml`.
 
+### Analytics
+If you have a google analytics tracking ID, add it to your config, and then build your site in production to ensure the google analytics script is generated on your pages:
+
+```
+JEKYLL_ENV=production bundle exec jekyll build
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
