@@ -3,14 +3,16 @@ header {
   list-style: none;
   position: relative;
   z-index: 1;
+  mix-blend-mode: multiply;
+
+  nav {
+    width: 90%;
+    margin: auto;
+  }
 
   ul {
     margin: 0 1rem;
     min-height: $min-header-height;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
   }
 
   li {
@@ -23,7 +25,8 @@ header {
   }
 
   .nav-home-button {
-    margin-right: auto;
+    display: flex;
+    align-items: center;
 
     a {
       transition: opacity 0.4s ease-in-out;
@@ -39,6 +42,23 @@ header {
 
     img {
       height: 70px;
+    }
+  }
+
+  .basic-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: $break-md) {
+    .nav-home-button {
+      text-align: center;
+    }
+
+    .basic-nav {
+      justify-content: center;
     }
   }
 }

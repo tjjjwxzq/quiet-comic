@@ -3,6 +3,8 @@ layout: default
 ---
 
 <div class="pages-layout Container--fluid">
+  {% assign collection =  paginator.posts.first.collection %}
+  <h1>All {{collection}}</h1>
   <div class="
     Grid
     Grid--gutters
@@ -11,7 +13,6 @@ layout: default
     md-Grid--1of4
     lg-Grid--1of6">
 
-    {% assign collection =  paginator.posts.first.collection %}
     {% if collection == "pages" %}
       {% assign items = paginator.posts | sort: 'page_number' | reverse %}
     {% else %}

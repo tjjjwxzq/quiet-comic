@@ -1,14 +1,21 @@
 <header>
   <nav>
-    <ul>
+    <ul class="Grid sm-Grid--1of1 md-Grid--1of2">
       {% unless page.is_home %}
-        <li class="nav-home-button">
+        <li class="Grid-cell nav-home-button">
           <a href="{{ "/" | relative_url }}">
-            <img src={{ site.brand_image | relative_url }} />
+            {% if site.brand_image %}
+              <img src={{ site.brand_image | relative_url }} />
+            {% else %}
+              {{ site.title }}
+            {% endif %}
           </a>
         </li>
       {% endunless %}
-      <li>
+      <div class="Grid-cell basic-nav">
+
+        <div class="Grid Grid--fit">
+      <li class="Grid-cell">
         {% assign last_page = (site.pages | sort: 'page_number' | last) %}
         {% if page.url == last_page.url %}
           <a href="{{ last_page.url | relative_url }}" class="active">Latest</a>
@@ -16,7 +23,7 @@
           <a href="{{ last_page.url | relative_url }}">Latest</a>
         {% endif %}
       </li>
-      <li>
+      <li class="Grid-cell">
         {% assign first_page = (site.pages | sort: 'page_number' | first) %}
         {% if page.url == first_page.url %}
           <a href="{{ first_page.url | relative_url }}" class="active">First</a>
@@ -24,20 +31,23 @@
           <a href="{{ first_page.url | relative_url }}">First</a>
         {% endif %}
       </li>
-      <li>
+      <li class="Grid-cell">
         {% if page.url == "/pages/index.html" %}
           <a href="{{ "pages" | relative_url }}" class="active">All</a>
         {% else %}
           <a href="{{ "pages" | relative_url }}">All</a>
         {% endif %}
       </li>
-      <li>
+      <li class="Grid-cell">
         {% if page.url == "/artworks/index.html" %}
           <a href="{{ "artworks" | relative_url }}" class="active">Gallery</a>
         {% else %}
           <a href="{{ "artworks" | relative_url }}">Gallery</a>
         {% endif %}
       </li>
+
+      </div>
+      </div>
     </ul>
   </nav>
 </header>

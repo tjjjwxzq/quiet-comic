@@ -57,6 +57,8 @@ is_home: true
 ---
 ```
 
+If you don't set the `brand_image` key, a text link to the homepage will be rendered in the header.
+
 ### Layouts
 
 The layouts are:
